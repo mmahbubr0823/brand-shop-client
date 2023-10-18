@@ -28,7 +28,7 @@ const Registration = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen rounded-xl mt-10">
+            <div className="hero rounded-xl mt-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card lg:w-[450px] flex-shrink-0 w-full max-w-sm shadow-2xl">
                         <form onSubmit={handleRegister} className="card-body ">
