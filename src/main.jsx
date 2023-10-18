@@ -11,6 +11,7 @@ import MainLayout from './Component/MainLayout/MainLayout';
 import AddProducts from './Component/Routes/AddProducts/AddProducts';
 import MyCart from './Component/Routes/MyCart/MyCart';
 import Login from './Component/Routes/Login/Login';
+import NotFound from './Component/Routes/NotFound/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>
+      },
+      {
+        path:"*",
+        element:<NotFound></NotFound>
       },
     ]
   },
