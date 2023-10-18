@@ -27,7 +27,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar lg:flex bg-base-100 my-8">
+            <div className="navbar lg:flex items-center bg-base-100 my-8">
                 <div className="lg:navbar-start block">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,32 +39,42 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className=" normal-case lg:text-xl xl:text-2xl">Brand <span className="text-[#fa4a4a]">Shop</span></a>
+                    <a className=" normal-case lg:text-xl xl:text-4xl">Brand <span className="text-[#fa4a4a]">Shop</span></a>
                 </div>
                 <div className="flex items-center lg:navbar-center xl:navbar-end">
                     <div className="lg:mr- xl:mr-8">
-                        <ul className="menu hidden lg:flex menu-horizontal px-1">
+                        <ul className="menu hidden lg:flex items-center menu-horizontal px-1">
                             {
                                 links
+                            }
+                            {
+                                user ?
+                                <div>
+                                     <button onClick={handleLogOut} className="px-2 py-1 rounded-md bg-[#f56d6d]">Log out</button>
+                                </div>
+                                :
+                                <div>
+                                    <Link className="px-2 py-1 rounded-md bg-[#f56d6d]" to="/login">Login</Link>
+                                </div>
                             }
 
                         </ul>
                     </div>
                     {
                         user ?
-                            <div className="flex">
+                            <div className="">
                                 <div className="md:flex items-center gap-5">
-                                    <button onClick={handleLogOut} className="px-2 py-1 rounded-md bg-[#f56d6d]">Log out</button>
+                                   
                                     <div className="">
                                         <h1>{user.displayName}</h1>
-                                        <img className="w-[60px] rounded-full mb-3" src={user.photoURL} alt="" />
+                                        <img className="w-[40px] rounded-full mb-3" src={user.photoURL} alt="" />
                                     </div>
                                 </div>
                             </div>
                             :
                             <div className="flex">
                                 <div className="flex gap-4 items-center">
-                                    <Link className="px-2 py-1 rounded-md bg-[#f56d6d]" to="/login">Login</Link>
+                                    
                                     <CgProfile className="text-4xl"></CgProfile>
                                 </div>
                             </div>
