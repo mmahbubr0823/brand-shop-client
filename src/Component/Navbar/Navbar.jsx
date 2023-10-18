@@ -39,7 +39,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className=" normal-case lg:text-xl xl:text-4xl">Brand <span className="text-[#fa4a4a]">Shop</span></a>
+                    <a className=" normal-case lg:text-xl xl:text-4xl font-semibold">Foods and Beverages <span className="text-[#fa4a4a]">Zone</span></a>
                 </div>
                 <div className="flex items-center lg:navbar-center xl:navbar-end">
                     <div className="lg:mr- xl:mr-8">
