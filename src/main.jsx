@@ -13,6 +13,7 @@ import MyCart from './Component/Routes/MyCart/MyCart';
 import Login from './Component/Routes/Login/Login';
 import NotFound from './Component/Routes/NotFound/NotFound';
 import Home from './Component/Routes/Home/Home';
+import PrivateRoute from './Component/Routes/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/addedProducts",
-        element:<AddProducts></AddProducts>
+        element:<PrivateRoute>
+          <AddProducts></AddProducts>
+        </PrivateRoute>
       },
       {
         path:"/myCart",
