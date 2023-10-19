@@ -12,12 +12,17 @@ import AddProducts from './Component/Routes/AddProducts/AddProducts';
 import MyCart from './Component/Routes/MyCart/MyCart';
 import Login from './Component/Routes/Login/Login';
 import NotFound from './Component/Routes/NotFound/NotFound';
+import Home from './Component/Routes/Home/Home';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
     children:[
+      {
+        path:"/",
+        element:<Home></Home>
+      },
       {
         path:"/registration",
         element:<Registration></Registration>

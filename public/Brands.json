@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brandName": "Coca-Cola",
+      "img": "https://i.ibb.co/jVxRnny/cola-pouring-glass.jpg"
+    },
+    {
+      "id": 2,
+      "brandName": "McDonald's",
+      "img": "https://i.ibb.co/7kjFTLM/burger-with-soda-french-fries.jpg"
+    },
+    {
+      "id": 3,
+      "brandName": "Starbucks",
+      "img": "https://i.ibb.co/cb3DkkG/aromatic-frappuccino-table.jpg"
+    },
+    {
+      "id": 4,
+      "brandName": "PepsiCo",
+      "img": "https://i.ibb.co/dKCWWMY/fresh-cola-drink-glass.jpg"
+    },
+    {
+      "id": 5,
+      "brandName": "Nestlé",
+      "img": "https://i.ibb.co/kSPqYfL/10749.jpg"
+    },
+    {
+      "id": 6,
+      "brandName": "Kellogg's",
+      "img": "https://i.ibb.co/Qp8phw5/140.jpg"
+    }
+  ]
+  
