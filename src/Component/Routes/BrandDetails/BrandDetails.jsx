@@ -1,12 +1,29 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import BrandProductCard from './BrandProductCard';
 
 const BrandDetails = () => {
-    const brandProducts = useLoaderData();
-    console.log(brandProducts);
+    const loadedBrandProducts = useLoaderData();
+    const [brandProducts, setBrandProducts] = useState(loadedBrandProducts)
+    const params = useParams();
+
+
+    useEffect(() => {
+        const updatedBrandProducts = brandProducts.filter(newProducts => newProducts.brand === params.brandName);
+
+        setBrandProducts(updatedBrandProducts)
+    }, [])
+
+    // console.log(brandProducts);
+
+
     return (
         <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellat nihil quia quisquam obcaecati nostrum, voluptate minima asperiores. Error accusamus, assumenda odio dolores odit beatae perspiciatis quaerat veniam perferendis officiis voluptatem, aliquam molestiae tenetur! Ipsa rerum possimus maxime. Adipisci tempora dolor labore quia error, eius vero in facere, aliquid unde, sed debitis exercitationem minima ipsum rem molestiae laborum maxime totam.
+            <div className='grid grid-cols-1 gap-5'>
+            {
+                brandProducts.map(brandProduct =><BrandProductCard key={brandProduct._id} brandProduct={brandProduct}></BrandProductCard>)
+            }
+            </div>
         </div>
     );
 };
