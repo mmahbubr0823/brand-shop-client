@@ -1,9 +1,16 @@
-import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import BrandCards from './BrandCards';
 
 const Home = () => {
+    const brands = useLoaderData();
+    // console.log(brands);
     return (
         <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae rerum pariatur, molestiae accusamus incidunt ab itaque quod, soluta dolor enim perspiciatis maiores modi alias eveniet sint suscipit nihil numquam! Laudantium.
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
+                {
+                    brands.map(brand => <BrandCards key={brand.id} brand={brand}></BrandCards>)
+                }
+            </div>
         </div>
     );
 };
