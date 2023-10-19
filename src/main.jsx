@@ -14,6 +14,7 @@ import Login from './Component/Routes/Login/Login';
 import NotFound from './Component/Routes/NotFound/NotFound';
 import Home from './Component/Routes/Home/Home';
 import PrivateRoute from './Component/Routes/PrivateRoute/PrivateRoute';
+import BrandDetails from './Component/Routes/BrandDetails/BrandDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,12 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=> fetch('./Brands.json')
+        loader:()=> fetch('/Brands.json')
+      },
+      {
+        path:"//brands/:brandName",
+        element:<BrandDetails></BrandDetails>,
+        loader:()=> fetch('http://localhost:5000/products')
       },
       {
         path:"/registration",
