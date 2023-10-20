@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BrandProductCard = ({ brandProduct }) => {
-    const { image, brand, name, type, price, description,  } = brandProduct;
-    console.log(brandProduct);
+    const { _id,image, brand, name, type, price, description,  } = brandProduct;
     return (
         <div>
             <div className="card h-96 bg-[#c5d0f3] shadow-xl">
@@ -12,11 +12,12 @@ const BrandProductCard = ({ brandProduct }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Product-name: {name}!</h2>
+                    <p>Brand: {brand}</p>
                     <p>Type: {type}</p>
                     <p>Description: {description}</p>
                     <p>Price: ${price}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Details </button>
+                        <Link to={`/brandProduct/${_id}`}><button className="btn btn-primary">Details </button></Link>
                         <button className="btn btn-danger ml-10">Update </button>
                     </div>
                 </div>
