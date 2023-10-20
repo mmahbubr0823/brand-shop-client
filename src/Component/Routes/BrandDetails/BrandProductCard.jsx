@@ -18,7 +18,9 @@ const BrandProductCard = ({ brandProduct }) => {
                     <p>Price: ${price}</p>
                     <div className="card-actions">
                         <Link to={`/brandProduct/${_id}`}><button className="btn btn-primary">Details </button></Link>
-                        <button className="btn btn-danger ml-10">Update </button>
+                       <Link to={`/update/${_id}`}>
+                       <button className="btn btn-danger ml-10">Update </button>
+                       </Link>
                     </div>
                 </div>
                 </div>

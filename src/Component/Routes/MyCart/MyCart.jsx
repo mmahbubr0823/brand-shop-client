@@ -42,6 +42,7 @@ const MyCart = () => {
         <div className='min-h-screen'>
             <h1 className='lg:text-2xl font-semibold my-5'>Your selected products:</h1>
             {
+                remainingData.length !==0 ?
                 remainingData.map((productData, index) => <div key={productData._id}>
                    <p className='my-5'>
                     {index+1}. {productData.name} ({productData.brand}) 
@@ -49,6 +50,10 @@ const MyCart = () => {
                    </p>
 
                 </div>)
+                :
+                <p className='text-3xl text-center font-bold my-10'>
+                    You have not added products yet.
+                </p>
             }
         </div>
     );
