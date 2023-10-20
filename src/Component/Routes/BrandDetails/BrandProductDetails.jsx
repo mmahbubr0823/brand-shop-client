@@ -21,7 +21,7 @@ const BrandProductDetails = () => {
         }
 
         // posting data 
-        fetch('http://localhost:5000/selectedProducts', {
+        fetch('https://brand-shop-server-dj2s0pwuv-mahbubur-rahmans-projects.vercel.app/selectedProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

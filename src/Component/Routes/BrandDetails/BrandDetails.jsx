@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import BrandProductCard from './BrandProductCard';
+import Carousel from './Carousel';
 
 const BrandDetails = () => {
     const loadedBrandProducts = useLoaderData();
@@ -19,6 +20,7 @@ const BrandDetails = () => {
 
     return (
         <div>
+            <Carousel></Carousel>
             <div className='grid grid-cols-1 gap-5'>
             {
                 brandProducts.map(brandProduct =><BrandProductCard key={brandProduct._id} brandProduct={brandProduct}></BrandProductCard>)

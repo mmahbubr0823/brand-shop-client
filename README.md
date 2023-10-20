@@ -1,8 +1,8 @@
-# React + Vite
+The website contains the following features:
+1. The home page contains six brand products.
+2. Email and password based authentication system is activated.
+3. Users can update, delete and add any products.
+4. It contains private route system for which user must be logged in to take maximum advantage.
+5. User can log in by google.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Client side live link:
