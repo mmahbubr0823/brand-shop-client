@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const BrandProductDetails = () => {
     const loadedProducts = useLoaderData();
@@ -11,9 +12,27 @@ const BrandProductDetails = () => {
         const findProduct = loadedProducts.find(brandProduct => brandProduct._id === id);
         setSingleProduct(findProduct)
     }, [loadedProducts, id])
-    console.log(singleProduct);
 
     const { image, brand, name, type, price, description} = singleProduct;
+
+    const handleData = ()=>{
+        const selectedProduct ={
+            name, brand, type, price
+        }
+
+        // posting data 
+        fetch('http://localhost:5000/selectedProducts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(selectedProduct)
+        })
+        .then(res => res.json())
+        .then(data => {
+            toast.success('User successfully logged in');
+        })
+    }
 
     return (
         <div>
@@ -29,7 +48,7 @@ const BrandProductDetails = () => {
                     <p>Description: {description}</p>
                     <p>Price: ${price}</p>
                     <div className="card-actions">
-                        <Link><button className="btn btn-primary">Add to cart </button></Link>
+                        <button onClick={handleData} className="btn btn-primary">Add to cart </button>
                     </div>
                 </div>
                 </div>
