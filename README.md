@@ -5,4 +5,5 @@ The website contains the following features:
 4. It contains private route system for which user must be logged in to take maximum advantage.
 5. User can log in by google.
 
-Client side live link:
+Client side live link: https://brand-shop-1377c.web.app/
+
