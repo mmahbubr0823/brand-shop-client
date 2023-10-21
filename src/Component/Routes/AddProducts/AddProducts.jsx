@@ -15,7 +15,7 @@ const AddProducts = () => {
             image, name, brand, type, price, description, rating
 
         }
-        fetch('https://brand-shop-server-dj2s0pwuv-mahbubur-rahmans-projects.vercel.app/products', {
+        fetch('food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

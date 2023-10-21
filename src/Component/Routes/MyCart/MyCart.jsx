@@ -19,7 +19,7 @@ const MyCart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://brand-shop-server-dj2s0pwuv-mahbubur-rahmans-projects.vercel.app/selectedProducts/${id}`, {
+                fetch(`food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/selectedProducts/${id}`, {
             method: 'DELETE'
         })
         .then(res =>res.json())

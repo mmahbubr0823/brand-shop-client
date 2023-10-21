@@ -17,7 +17,7 @@ const Update = () => {
             image, name, brand, type, price, description, rating
 
         }
-        fetch(`https://brand-shop-server-dj2s0pwuv-mahbubur-rahmans-projects.vercel.app/products/${_id}`, {
+        fetch(`food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
