@@ -31,14 +31,14 @@ const router = createBrowserRouter([
       {
         path:"/brands/:brandName",
         element:<BrandDetails></BrandDetails>,
-        loader:()=> fetch('food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/products')
+        loader:()=> fetch('https://food-beverage-server-seven.vercel.app/products')
       },
       {
         path:"/brandProduct/:id",
         element:<PrivateRoute>
           <BrandProductDetails></BrandProductDetails>
         </PrivateRoute>,
-        loader:()=> fetch('food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/products')
+        loader:()=> fetch('https://food-beverage-server-seven.vercel.app/products')
       },
       {
         path:"/registration",
@@ -55,12 +55,12 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
           <MyCart></MyCart>,
         </PrivateRoute>,
-        loader:() => fetch('food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/selectedProducts')
+        loader:() => fetch('https://food-beverage-server-seven.vercel.app/selectedProducts')
       },
       {
         path:"/update/:id",
         element: <Update></Update>,
-        loader:({params})=> fetch(`food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/products/${params.id}`)
+        loader:({params})=> fetch(`https://food-beverage-server-seven.vercel.app/products/${params.id}`)
       },
       {
         path:"/login",

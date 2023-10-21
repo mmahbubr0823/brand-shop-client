@@ -3,7 +3,7 @@ import React from 'react';
 const Carousel = () => {
     return (
         <div className='my-10'>
-            <div className="carousel w-1/2 h-[400px] mx-auto">
+            <div className="carousel lg:w-1/2 h-[300] lg:h-[400px] mx-auto">
                 <div id="item1" className="carousel-item w-full">
                     <img src="https://i.ibb.co/jVxRnny/cola-pouring-glass.jpg" className="w-full" />
                 </div>

@@ -7,7 +7,7 @@ const BrandCards = ({ brand }) => {
         <div>
             
             <Link to={`/brands/${brandName}`}>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card lg:w-72 xl:w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={img} alt="Shoes" className="w-[300px] h-[300px] rounded-xl" />
                     </figure>

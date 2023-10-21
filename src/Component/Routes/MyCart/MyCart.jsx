@@ -19,19 +19,20 @@ const MyCart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/selectedProducts/${id}`, {
+                fetch(`https://food-beverage-server-seven.vercel.app/selectedProducts/${id}`, {
             method: 'DELETE'
         })
         .then(res =>res.json())
         .then(data =>{
-            if (data.deleteCount > 0) {
+            console.log(data);
+            if (data.deletedCount > 0) {
                 Swal.fire(
                   'Deleted!',
-                  'Your file has been deleted.',
+                  'Your product has been removed.',
                   'success'
                 )
             }
-            const remaining = remainingData.filter(singleData => singleData._id !== id)
+            const remaining = remainingData?.filter(singleData => singleData._id !== id)
             setRemainingData(remaining)
         } 
         )  
@@ -43,7 +44,7 @@ const MyCart = () => {
             <h1 className='lg:text-2xl font-semibold my-5'>Your selected products:</h1>
             {
                 remainingData.length !==0 ?
-                remainingData.map((productData, index) => <div key={productData._id}>
+                remainingData?.map((productData, index) => <div key={productData._id}>
                    <p className='my-5'>
                     {index+1}. {productData.name} ({productData.brand}) 
                     <button onClick={()=> handleDelete(productData._id)} className='btn bt-secondary ml-5'>Delete</button>

@@ -9,7 +9,7 @@ const BrandProductDetails = () => {
 
     //    finding matching product 
     useEffect(() => {
-        const findProduct = loadedProducts.find(brandProduct => brandProduct._id === id);
+        const findProduct = loadedProducts?.find(brandProduct => brandProduct._id === id);
         setSingleProduct(findProduct)
     }, [loadedProducts, id])
 
@@ -21,7 +21,7 @@ const BrandProductDetails = () => {
         }
 
         // posting data 
-        fetch('food-beverage-server-e73e6gozi-mahbubur-rahmans-projects.vercel.app/selectedProducts', {
+        fetch('https://food-beverage-server-seven.vercel.app/selectedProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -30,18 +30,18 @@ const BrandProductDetails = () => {
         })
         .then(res => res.json())
         .then(data => {
-            toast.success('User successfully logged in');
+            toast.success('Product successfully added to Cart.');
         })
     }
 
     return (
         <div>
-            <div className="card h-[500px] bg-[#c5d0f3] shadow-xl">
-                <div className='flex'>
-                <figure className="px-10 pt-10 w-1/3">
-                    <img src={image} alt="Shoes" className="rounded-xl w-[300] h-[300]" />
+            <div className="card lg:h-[500px] bg-[#c5d0f3] shadow-xl">
+                <div className='lg:flex'>
+                <figure className="px-10 pt-10 lg:w-1/3">
+                    <img src={image} alt="Shoes" className="rounded-xl lg:w-[300] lg:h-[300]" />
                 </figure>
-                <div className="card-body items-center text-center w-2/3">
+                <div className="card-body items-center mx-auto text-center w-2/3">
                     <h2 className="card-title">Product-name: {name}!</h2>
                     <p>Brand: {brand}</p>
                     <p>Type: {type}</p>

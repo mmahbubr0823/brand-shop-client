@@ -4,8 +4,8 @@ const Banner = () => {
     return (
         <div>
             <div className='relative'>
-                <div>
-                    <img className='w-full h-[500px] rounded-lg' src={'https://i.ibb.co/54Hh1X1/top-view-table-full-delicious-food-composition.jpg'} alt="" />
+                <div className='flex justify-center'>
+                    <img className='w-[250px]  lg:w-full lg:h-[500px] rounded-lg' src={'https://i.ibb.co/54Hh1X1/top-view-table-full-delicious-food-composition.jpg'} alt="" />
                 </div>
                 <div className='absolute top-28 left-72'>
                     <p className='text-white text-4xl'>

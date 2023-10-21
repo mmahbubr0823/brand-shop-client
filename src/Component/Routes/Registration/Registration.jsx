@@ -6,7 +6,7 @@ import { authContext } from '../../AuthProvider/MyAuthContext';
 const Registration = () => {
     const { createUser } = useContext(authContext);
     const navigate = useNavigate();
-// handling form data 
+    // handling form data 
     const handleRegister = e => {
         e.preventDefault();
         const email = e.target.email.value;

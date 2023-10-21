@@ -10,7 +10,7 @@ const BrandDetails = () => {
 
 
     useEffect(() => {
-        const updatedBrandProducts = brandProducts.filter(newProducts => newProducts.brand === params.brandName);
+        const updatedBrandProducts = brandProducts?.filter(newProducts => newProducts.brand === params.brandName);
 
         setBrandProducts(updatedBrandProducts)
     }, [])
@@ -23,7 +23,7 @@ const BrandDetails = () => {
             <Carousel></Carousel>
             <div className='grid grid-cols-1 gap-5'>
             {
-                brandProducts.map(brandProduct =><BrandProductCard key={brandProduct._id} brandProduct={brandProduct}></BrandProductCard>)
+                brandProducts?.map(brandProduct =><BrandProductCard key={brandProduct._id} brandProduct={brandProduct}></BrandProductCard>)
             }
             </div>
         </div>
