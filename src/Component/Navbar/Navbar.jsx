@@ -26,13 +26,13 @@ const Navbar = () => {
         <li className="lg:mr-0 mb-2 lg:mb-0"><NavLink to="/registration">Register</NavLink></li>
         {
                                 user ?
-                                <div>
+                                <li>
                                      <button onClick={handleLogOut} className="px-2 py-1 rounded-md lg:bg-[#f56d6d]">Log out</button>
-                                </div>
+                                </li>
                                 :
-                                <div>
-                                    <Link className="px-2 py-1 rounded-md lg:bg-[#f56d6d]" to="/login">Login</Link>
-                                </div>
+                                <li>
+                                    <Link className="px-2 py-1 rounded-md" to="/login">Login</Link>
+                                </li>
                             }
     </>
     return (
